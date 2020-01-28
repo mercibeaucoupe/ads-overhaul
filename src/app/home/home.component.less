@@ -38,11 +38,17 @@
                         color: #007bb5;
                         text-decoration: none;
                     }
-                    a:first-child {
+                    .fb-link {
                         color: #3B5998;
                     }
-                    a:last-child {
+                    .yelp-link {
                         color: #d32323;
+                    }
+                    .phone-link {
+                        color: #53d769;
+                    }
+                    .email-link {
+                        color: #5fc9f8;
                     }
                     a:hover {
                         color: @secondary;
@@ -79,21 +85,24 @@
                     }
                 }
             }
+            .header {
+                font-size: 6rem;
+            }
             .caption {
                 font-size: 24px;
                 font-weight: lighter;
             }
             .login-container {
                 flex: 2;
-                min-width: 320px;
+                max-width: 200px;
                 background-color: #0e1325;
                 transition: .2s;
-                box-shadow: -2px 2px 8px rgba(0,0,0,.2);
+                box-shadow: -2px 0px 10px rgba(33,33,33,.75);
             }
-            .login-container.open {
+            .login-container.opened {
                 min-width: 320px;
             }
-            .login-container.close {
+            .login-container.closed {
                 min-width: 65px;
                 flex: 0;
             }

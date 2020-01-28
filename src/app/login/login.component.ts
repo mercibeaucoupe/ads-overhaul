@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class LoginComponent implements OnInit {
 
-    navIconState: string = 'active'
+    navIconState: string = 'opened'
     isActive: boolean = true
     year: string = (new Date()).getFullYear().toString()
 
@@ -19,13 +19,13 @@ export class LoginComponent implements OnInit {
     ngOnInit() {}
 
     toggleNav() {
-        if (this.navIconState === 'active') {
-            this.navIconState = 'inactive'
-            this.toggleMenu.emit('inactive')
+        if (this.navIconState === 'opened') {
+            this.navIconState = 'closed'
+            this.toggleMenu.emit('closed')
             this.isActive = false
         } else {
-            this.navIconState = 'active'
-            this.toggleMenu.emit('active')
+            this.navIconState = 'opened'
+            this.toggleMenu.emit('opened')
             this.isActive = true
         }
     }

@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "projectADS"
+  "defaultProject": "projectADS",
+  "cli": {
+    "analytics": false
+  }
 }

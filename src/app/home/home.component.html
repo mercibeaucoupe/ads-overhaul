@@ -8,18 +8,24 @@
                         <div>Accurate Dental Studios</div>
                     </div>
                     <div class="social-media">
-                        <a href="https://www.facebook.com/AccurateDentalStudios/" target="_blank">
+                        <a href="https://www.facebook.com/AccurateDentalStudios/" target="_blank"  class="fb-link">
                             <div class="fab fa-facebook-square"></div>
                         </a>
-                        <a href="https://www.linkedin.com/in/richard-j-339b53172" target="_blank">
+                        <a href="https://www.linkedin.com/in/richard-j-339b53172" target="_blank" class="linked-link">
                             <div class="fab fa-linkedin"></div>
                         </a>
-                        <a href="https://www.yelp.com/biz/accurate-dental-studios-suwanee" target="_blank">
+                        <a href="https://www.yelp.com/biz/accurate-dental-studios-suwanee" target="_blank" class="yelp-link">
                             <div class="fab fa-yelp"></div>
+                        </a>
+                        <a href="tel:6785950185" target="_blank" class="phone-link">
+                            <div class="fas fa-phone-square-alt"></div>
+                        </a>
+                        <a href="mailto:lab@accuratedental.net" class="email-link">
+                            <div class="fas fa-envelope-square"></div>
                         </a>
                     </div>
                 </div>
-                <div>
+                <div class="header">
                     <div>We are the</div>
                     <div class="accent">Makers</div>
                     <div>of Teeth.</div>
@@ -29,7 +35,7 @@
                     </div>
                 </div>
                 <div class="link-container">
-                    <div>Home</div>
+                    <div [routerLink]="['/']">Home</div>
                     <div [routerLink]="['about']">About</div>
                     <div>Support</div>
                     <div>Careers</div>

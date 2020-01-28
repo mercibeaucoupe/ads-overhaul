@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
 
-    sidebar: string = "open"
+    sidebar: string = "opened"
 
     constructor() {}
 
@@ -16,10 +16,6 @@ export class HomeComponent implements OnInit {
     }
 
     toggleMenu = (value: string):void => {
-        if (value === 'active') {
-            this.sidebar = "open"
-        } else {
-            this.sidebar = "close"
-        }
+        this.sidebar = value
     }
 }
