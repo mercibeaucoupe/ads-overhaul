@@ -1,13 +1,35 @@
+@import "../app.component.less";
+
 .container {
     min-width: 320px;
     height: 100vh;
     max-height: 100%;
     .wrapper {
         width: 100%;
-        padding: 3rem 1.25rem;
+        padding: 3.75rem 0 .5em 0;
         height: inherit;
         display: flex;
         flex-direction: column; 
+        .toggle-menu {
+            font-size: 32px;
+            position: absolute;
+            top: 0;
+            margin-top: .5em;
+            margin-left: .5em;
+            cursor: pointer;
+        }
+        .toggle-menu.inactive {
+            color: #fff;
+        }
+        .toggle-menu.inactive:hover {
+            color: @secondary;
+        }
+        .toggle-menu.active:hover {
+            color: @secondary-light;
+        }
+        .toggle-menu.active {
+            color: @secondary;
+        }
         .header {
             .title {
                 color: #fff;
@@ -26,6 +48,13 @@
             .lead {
                 margin: 10px 0;
             }
+        }
+        .sidebar-container {
+            display: flex; 
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
         .selector {
             display: flex;
@@ -47,6 +76,10 @@
                 font-size: 18px;
             }
         }
+    }
+    .footer {
+        font-size: 12px;
+        text-align: center;
     }
 }
 

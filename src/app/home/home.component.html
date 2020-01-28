@@ -3,8 +3,21 @@
         <div class="default-container">
             <div class="content-container">
                 <div class="header-container">
-                    <img src="../../assets/public/ads-new-logo.png" style="width: 80px;">
-                    <div>Accurate Dental Studios</div>
+                    <div class="title">
+                        <img src="../../assets/public/tooth-aim.png" style="width: 75px;margin-right: .25em;">
+                        <div>Accurate Dental Studios</div>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/AccurateDentalStudios/" target="_blank">
+                            <div class="fab fa-facebook-square"></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/richard-j-339b53172" target="_blank">
+                            <div class="fab fa-linkedin"></div>
+                        </a>
+                        <a href="https://www.yelp.com/biz/accurate-dental-studios-suwanee" target="_blank">
+                            <div class="fab fa-yelp"></div>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <div>We are the</div>
@@ -17,15 +30,15 @@
                 </div>
                 <div class="link-container">
                     <div>Home</div>
-                    <div>About</div>
+                    <div [routerLink]="['about']">About</div>
                     <div>Support</div>
                     <div>Careers</div>
                     <div>Contact</div>
                     <div>FAQ's</div>
                 </div>
             </div>
-            <div class="login-container" [ngClass]="sidebar">
-                <app-login></app-login>
+            <div class="login-container" [ngClass]="sidebar" >
+                <app-login (toggleMenu)="toggleMenu($event)"></app-login>
             </div>
         </div>
     </div>

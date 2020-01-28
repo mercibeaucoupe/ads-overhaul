@@ -15,8 +15,8 @@
             background-size: cover;
             .content-container {
                 flex: 5;
-                font-size: 72px;
-                padding: 5rem 5rem;
+                font-size: 76px;
+                padding: 0 1.5rem 5rem 5rem;
                 font-weight: bold;
                 display: flex;
                 text-align: left;
@@ -25,6 +25,29 @@
                 background: linear-gradient(180deg, rgba(117,200,182,.75) 0, rgba(14,19,37,.95) 100%);
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+                .social-media {
+                    display: flex;
+                    font-size: 28px;
+                    align-self: flex-start;
+                    margin-top: 25px;
+                    background-color: rgba(33,33,33,.15);
+                    border-radius: 5px;
+                    padding: 0 .35em;
+                    a {
+                        margin: .35em;
+                        color: #007bb5;
+                        text-decoration: none;
+                    }
+                    a:first-child {
+                        color: #3B5998;
+                    }
+                    a:last-child {
+                        color: #d32323;
+                    }
+                    a:hover {
+                        color: @secondary;
+                    }
+                }
                 .accent {
                     color: #75C8B6;
                 }
@@ -32,9 +55,17 @@
                     font-weight: normal;
                 }
                 .header-container {
-                    font-size: 30px;
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
+                    .title {
+                        margin-top: 2em;
+                        display: flex;
+                        align-items: center;
+                        color: @primary;
+                        font-weight: bold;
+                        font-size: 32px;
+                    }
                 }
                 .link-container {
                     font-size: 16px;
@@ -47,13 +78,6 @@
                         text-decoration: underline;
                     }
                 }
-            }
-            .divider {
-                width: 40%;
-                height: 1px;
-                min-height: 1px;
-                opacity: .6;
-                margin: .35em 0;
             }
             .caption {
                 font-size: 24px;
@@ -69,8 +93,8 @@
             .login-container.open {
                 min-width: 320px;
             }
-            .login-container.closed {
-                min-width: 50px;
+            .login-container.close {
+                min-width: 65px;
                 flex: 0;
             }
         }

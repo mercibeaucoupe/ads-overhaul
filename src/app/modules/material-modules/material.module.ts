@@ -4,6 +4,7 @@ import {
     MatInputModule,
     MatSliderModule,
     MatCheckboxModule,
+    MatDividerModule,
 } from '@angular/material'
 
 const MaterialModule = [
@@ -11,6 +12,7 @@ const MaterialModule = [
     MatInputModule,
     MatSliderModule,
     MatCheckboxModule,
+    MatDividerModule
 ]
 
 @NgModule({

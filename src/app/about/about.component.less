@@ -1,0 +1,58 @@
+@import '../app.component.less';
+
+.backdrop {
+    background-image: url('../../assets/public/wave-01.png');
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    background-position: 50% 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    padding: 3em;
+    font-weight: lighter;
+    box-shadow: 1px 1px 8px rgba(33,33,33,.8);
+    .caption {
+        margin: 2em;
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    font-size: 16px;
+}
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200vh;
+    background-color: @secondary-light;
+}
+
+.em {
+    font-weight: bold; 
+    color: @secondary-light;
+}
+
+.image-layer {
+    position: relative;
+    width: 600px;
+    height: 425px;
+    box-shadow: 2px 2px 14px rgba(33,33,33,.65);
+    z-index: 1;
+    top: -212.5px;
+}
+.image-container {
+    background-image: url('../../assets/public/about-image.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}

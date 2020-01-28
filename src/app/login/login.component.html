@@ -1,28 +1,43 @@
 <div class="container">
     <div class="wrapper">
-        <div class="header">
-            <div class="title">Join our growing network of</div>
-            <div class="lead">200+ dental professsionals and labs</div>
+        <div class="toggle-menu" [ngClass]="navIconState" (click)="toggleNav()">
+            <div class="fas fa-bars"></div>
         </div>
-        <div class="selector-container">
-            <div class="lead">Signup as a...</div>
-            <div class="selector">
-                <div>DENTIST</div>
-                <div>LAB</div>
+        <mat-divider></mat-divider>
+        <div *ngIf="isActive" class="sidebar-container">
+            <div class="header">
+                <div class="title">Join our growing network of</div>
+                <div class="lead">200+ dental professsionals and labs</div>
             </div>
-        </div>
-        <div class="form-container">
-            <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input matInput />
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Password</mat-label>
-                <input matInput />
-            </mat-form-field>
-            <mat-checkbox>I accept to the <strong>Terms and Conditions</strong></mat-checkbox>
-            <div>
-                <button mat-raised-button color="primary">Sign Up</button>
+            <div class="selector-container">
+                <div class="lead">Signup as a...</div>
+                <div class="selector">
+                    <div>DENTIST</div>
+                    <div>LAB</div>
+                </div>
+            </div>
+            <div class="form-container">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput />
+                </mat-form-field>
+                <mat-checkbox>I accept to the <strong>Terms and Conditions</strong></mat-checkbox>
+                <div>
+                    <button mat-raised-button color="primary">Sign Up</button>
+                </div>
+            </div>
+            <div class="footer">
+                <div>
+                    HIPAA/Privacy Policy
+                </div>
+                <div>
+                    &#9400; 2017 - {{year}} Accurate Dental Studios, LLC. All Rights Reserved
+                </div>
+                
             </div>
         </div>
     </div>

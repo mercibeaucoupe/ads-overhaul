@@ -15,7 +15,11 @@ export class HomeComponent implements OnInit {
 
     }
 
-    toggleSidebar = ():void => {
-        this.sidebar = (this.sidebar === "open") ? "close" : "open"
+    toggleMenu = (value: string):void => {
+        if (value === 'active') {
+            this.sidebar = "open"
+        } else {
+            this.sidebar = "close"
+        }
     }
 }

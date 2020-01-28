@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: 'app-login',
@@ -7,7 +7,26 @@ import { Component, OnInit } from "@angular/core";
 })
 export class LoginComponent implements OnInit {
 
+    navIconState: string = 'active'
+    isActive: boolean = true
+    year: string = (new Date()).getFullYear().toString()
+
+    @Output()
+    toggleMenu = new EventEmitter()
+
     constructor() {}
 
     ngOnInit() {}
+
+    toggleNav() {
+        if (this.navIconState === 'active') {
+            this.navIconState = 'inactive'
+            this.toggleMenu.emit('inactive')
+            this.isActive = false
+        } else {
+            this.navIconState = 'active'
+            this.toggleMenu.emit('active')
+            this.isActive = true
+        }
+    }
 }
