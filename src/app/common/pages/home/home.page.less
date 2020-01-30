@@ -1,0 +1,61 @@
+@import "../../../app.component.less";
+
+.container {
+    min-width: 100%;
+    min-height: 100%;
+    color: #fff;
+    background-image: url('src/assets/public/main-backdrop.jpg');
+    background-size: cover;
+    .content-container {
+        font-size: 76px;
+        padding: 0 1.5rem 5rem 5rem;
+        font-weight: bold;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(180deg, rgba(117,200,182,.75) 0, rgba(14,19,37,.95) 100%);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        max-height: 100%;
+        height: 100vh;
+        .link-container, .header-container {
+            font-weight: normal;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title {
+                margin-top: 1em;
+                font-family: 'Alegreya Sans SC', sans-serif;
+                display: flex;
+                align-items: center;
+                color: @primary;
+                font-weight: bold;
+                font-size: 40px;
+            }
+        }
+        .link-container {
+            font-size: 16px;
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            div:hover {
+                color: @secondary;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    .header {
+        font-size: 6rem;
+    }
+    .caption {
+        font-size: 24px;
+        font-weight: lighter;
+    }
+    .accent {
+        color: @secondary;
+    }
+}

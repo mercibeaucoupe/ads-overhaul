@@ -1,0 +1,8 @@
+<div id="common-container">
+    <div class="router-container">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="login-container" [ngClass]="sidebar">
+        <app-login (toggleMenu)="toggleMenu($event)"></app-login>
+    </div>
+</div>
